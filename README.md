@@ -6,7 +6,7 @@ A machine learning-based project for real-time vehicle detection and tracking us
 
 ## **Table of Contents**
 1. [Features](#features)
-2. [Demo](#demo)
+2. [Motivation](#motivation)
 3. [Installation](#installation)
 4. [Results](#results)
 5. [Acknowledgments](#acknowledgments)
@@ -25,9 +25,18 @@ A machine learning-based project for real-time vehicle detection and tracking us
 
 ---
 
-## **Demo**
-![Vehicle Detection Demo](demo.gif)  
-*Example of vehicle detection and tracking in action.*
+## **Motivation**
+- Detect Vehicles in Each Lane:
+  - Use YOLO for vehicle detection: Detect vehicles in each lane by feeding frames from the video stream into YOLO. YOLO will provide bounding boxes for each vehicle detected.
+  - Lane Division: Divide the video frame into lanes (using an algorithm or predefined positions) so that vehicles can be tracked in specific sections.
+- Vehicle Tracking:
+  - Use DeepSORT: Track the vehicles across frames with DeepSORT. This will help identify if a vehicle is still present in a lane or if it has exited.
+  - Track Vehicle Count: Maintain a count of vehicles in each lane, updating as vehicles enter or exit the lanes.
+- Implement Timer Logic:
+  - Green Timer: When a vehicle is detected in a lane, set the timer to green for that lane. If a vehicle is no longer detected within a certain time frame, switch the light to red for       that lane.
+  - Empty Lane Detection: If a lane is detected to be empty for a specified duration, immediately turn the light red and switch the timer to the next lane with vehicles.
+- Traffic Signal Logic:
+  - Signal Change: Once the timer for a lane with vehicles reaches its limit, change the signal to green for the next lane with vehicles. If no vehicles are detected, change to red and       move the timer to the next lane.
 
 ---
 
@@ -82,6 +91,5 @@ This project was inspired by and uses code from:
 Contributions are welcome! Please fork the repository and create a pull request with your improvements.
 
 ## **Contact**
-- Kumar Chandra Bhanu
 - GitHub: https://github.com/chbhanu160
 - Email: kr.chandra.bhanu@gmail.com
