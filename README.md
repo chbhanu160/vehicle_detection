@@ -1,58 +1,47 @@
-Vehicle Detection and Tracking with YOLOv8 and DeepSORT
-This project implements a vehicle detection and tracking system using machine learning techniques, leveraging YOLOv8 Segmentation and DeepSORT for accurate object detection and tracking. The project also integrates a traffic signal control logic for single-lane scenarios, enabling dynamic signal switching based on vehicle presence and movement.
+# **Vehicle Detection and Tracking Using YOLO and DeepSORT**
 
-Key Features
-Object Detection: Uses YOLOv8 for detecting vehicles (cars, buses, motorbikes, etc.) in video streams.
-Object Tracking: Integrates DeepSORT for tracking objects across frames with unique identities.
-Traffic Signal Logic:
-Dynamically switches traffic lights based on vehicle presence in lanes.
-Ensures efficient lane management with red and green signals.
-Custom Lane Detection: Implements single-lane vehicle detection to monitor entering and leaving vehicles with counting logic.
-Project Inspiration
-This project draws inspiration from the repository YOLOv8_Segmentation_DeepSORT_Object_Tracking. Enhancements and additional features such as traffic signal control logic and lane-specific vehicle detection have been developed.
+A machine learning-based project for real-time vehicle detection and tracking using YOLOv8 and DeepSORT. This project integrates single-lane vehicle detection and advanced tracking capabilities.
 
-Traffic Signal Logic Overview
-Green Signal: Lights up when vehicles are detected in the lane.
-Red Signal: Lights up when no vehicles are detected or when a lane is inactive.
-Real-time Counting: Tracks and displays the number of vehicles entering and leaving the lane.
-Project Requirements
-To replicate this project, the following dependencies are required:
+---
 
-Python 3.8+
-PyTorch
-OpenCV
-ultralytics (YOLOv8)
-deep_sort_pytorch
-NumPy
-SymPy
-Install dependencies using:
+## **Table of Contents**
+1. [Features](#features)
+2. [Demo](#demo)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Acknowledgments](#acknowledgments)
+6. [Technologies Used](#technologies-used)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Contact](#contact)
 
-bash
-Copy code
-pip install -r requirements.txt
-Usage
-Clone the Repository
-bash
-Copy code
-git clone https://github.com/yourusername/Vehicle-Detection-and-Traffic-Signal.git
-cd Vehicle-Detection-and-Traffic-Signal
-Initialize the DeepSORT Tracker
-Ensure the deep_sort_pytorch/configs/deep_sort.yaml file is properly configured.
+---
 
-Run the Code
-Run the vehicle detection script with:
+## **Features**
+- Real-time vehicle detection and tracking
+- Single-lane vehicle counting
+- Traffic signal control logic
+- Easy integration with YOLOv8 and DeepSORT
+- Displays vehicle direction and count
 
-bash
-Copy code
-python vehicle_detection.py --source <video_path> --weights <yolov8_weights_path>
-Traffic Signal Visualization
-The program displays the current status of traffic signals on the video feed, with real-time updates based on vehicle movement.
+---
 
-Results
-The project detects and tracks vehicles accurately, while dynamically managing traffic signals. It can be adapted for various scenarios, including multi-lane management.
+## **Demo**
+![Vehicle Detection Demo](demo.gif)  
+*Example of vehicle detection and tracking in action.*
 
-Sample Output
-Vehicle counting on entering and leaving the lane.
-Real-time traffic signal control for efficient traffic flow.
-Acknowledgments
-YOLOv8_Segmentation_DeepSORT_Object_Tracking for providing the base implementation for object detection and tracking.
+---
+
+## **Installation**
+
+### Prerequisites
+- Python 3.8 or higher
+- Pytorch 1.12 or higher
+- CUDA Toolkit for GPU acceleration (optional)
+
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your_username>/<your_repo>.git
+   cd <your_repo>
+
