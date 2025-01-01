@@ -67,7 +67,8 @@ A machine learning-based project for real-time vehicle detection and tracking us
 5. Setting the Directory.
    ```bash
    cd ultralytics/yolo/v8/segment
-6. For yolov8 object detection + Tracking + Vehicle Counting
+6. Use the Predict.py Python Code for Vehicle detection and tracking and Predict1.py for single lane Real-time traffic management 
+7. For yolov8 object detection + Tracking + Vehicle Counting
    ```bash
    python predict.py model=yolov8l.pt source="test3.mp4" show=True
    python predict.py model=yolov8l.pt source="test8.mp4" show=True
