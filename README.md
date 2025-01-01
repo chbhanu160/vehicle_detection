@@ -50,17 +50,27 @@ A machine learning-based project for real-time vehicle detection and tracking us
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/chbhanu160/vehicle_detection.git
+   git clone https://github.com/MuhammadMoinFaisal/YOLOv8-DeepSORT-Object-Tracking.git
    cd YOLOv8-DeepSORT-Object-Tracking\
 2. Install the Dependencies
    ```bash
    pip install -e '.[dev]'
-3. Setting the Directory.
+3. Downloading the DeepSORT Files From The Google Drive
+   ```bash
+   https://drive.google.com/drive/folders/1kna8eWGrSfzaR6DtNJ8_GchGgPMv3VC8?usp=sharing
+4. After downloading the DeepSORT Zip file from the drive, unzip it go into the subfolders and place the deep_sort_pytorch folder into the yolo/v8/detect folder
+   Downloading a Sample Video from the Google Drive
+   ```bash
+   pip install gdown
+   gdown "https://drive.google.com/uc?id=1rjBn8Fl1E_9d0EMVtL24S9aNQOJAveR5&confirm=t"
+   pip install easydict
+5. Setting the Directory.
    ```bash
    cd ultralytics/yolo/v8/segment
-5. For yolov8 object detection + Tracking + Vehicle Counting
+6. For yolov8 object detection + Tracking + Vehicle Counting
    ```bash
    python predict.py model=yolov8l.pt source="test3.mp4" show=True
+   python predict.py model=yolov8l.pt source="test8.mp4" show=True
 ---
 
 ## **Results**
